@@ -1,0 +1,41 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Добавление новой работы</title>
+</head>
+<body>
+    <div>
+        <h3>Форма добавление работы</h3>
+        <p>Заполните следующие поля:</p>
+        <form method="post">
+            <table>
+                <tr>
+                    <td>Заголовок:</td>
+                    <td><input type="text" name="Title" /> </td>
+                </tr>
+                <tr>
+                    <td>Комментарий:</td>
+                    <td><input type="text" name="Comment" /></td>
+                </tr>
+                <tr>
+                    <td>Тип работы:</td>
+                    <td><input type="text" name="WorkTypeId" /></td>
+                </tr>
+                <tr>
+                    <td>Дата выполнения:</td>
+                    <td><input type="date" name="DateCompletion" /></td>
+                </tr>
+                <tr>
+                    <td>Выполнена:</td>
+                    <td><input type="checkbox" name="IsReady" /></td>
+                </tr>
+                <tr><td><input type="submit" value="Добавить" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿@model IEnumerable<todo.Models.WorkType>
+@{
+    ViewData["Title"] = "Справочник типов работ";
+}
+<h3>Справочник типов работ</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Тип работы</td>
+        <td></td>
+    </tr>
+    @foreach (var wt in Model)
+    {
+        <tr>
+            <td>@wt.Discription</td>
+            <td><a href="~/Home/DeleteWorkType/@wt.WorkTypeId">Удалить</a></td>
+        </tr>
+    }
+</table>
+
+<a href="~/Home/AddNewWorkType">Добавить Новую</a>

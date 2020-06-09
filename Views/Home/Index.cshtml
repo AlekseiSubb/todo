@@ -1,0 +1,29 @@
+﻿@model IEnumerable<todo.Models.Work>
+@{
+    ViewData["Title"] = "Список дел";
+}
+<h3>Список дел</h3>
+<table class="table-condensed">
+    <tr>
+        <td>Заголовок</td>
+        <td>Комментарий</td>
+        <td>Тип работы</td>
+        <td>Срок выполнения</td>
+        <td>выполнено</td>
+        <td></td>
+    </tr>
+    @foreach (var work in Model)
+    {
+<tr>
+    <td>@work.Title</td>
+    <td>@work.Comment</td>
+    <td>@work.WorkTypeId</td>
+    <td>@work.DateCompletion</td>
+    <td>@work.IsReady</td>
+    <td><a href="~/Home/UpdateWork/@work.WorkId">Отметить как выполнена</a></td>
+    <td><a href="~/Home/DeleteWork/@work.WorkId">Удалить</a></td>
+</tr>
+    }
+</table>
+
+<a href="~/Home/AddNewWork">Добавить Работу</a>
